@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="es-MX">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
     <title>Encriptador</title>
 </head>
+
 <body>
     <header>
         <img src="./imagenes/Logo (2).png" class="imagen__logo" alt="Logo de Alura">
     </header>
     <main>
-        <section>
-            <textarea class="textarea" name="" id="" cols="30" rows="10" placeholder="Ingresa el texto. Solo minúsculas y sin acentos"></textarea>
+        <section class="area__1">
+            <textarea class="area__1__texto" name="" id="" cols="30" rows="10"
+                placeholder="Ingresa el texto. Solo minúsculas y sin acentos"></textarea>
             <div class="botones">
-                <button class="boton_encriptar"> Encriptar texto</button>
-                <button class="boton_desencriptar"> Desencriptar texto</button>
+                <button class="boton__encriptar"> Encriptar texto</button>
+                <button class="boton__desencriptar"> Desencriptar texto</button>
             </div>
         </section>
-        <section>
-            <textarea class="resultado" cols="20" rows="10" name="" id=""></textarea>
-            <div>
+        <section class="area__2">
+            <div class="area2__texto">
+                <textarea class="area__2__texto" name="" id="" cols="20" rows="10"
+                    placeholder="Ningún mensaje fue encontrado.&#10;Ingresa el texto que desees encriptar o desencriptar."
+                    readonly></textarea>
+            </div>
+            <div class="botones">
                 <button class="boton__copiar">Copiar texto</button>
+                <button class="boton__limpiar">Volver a iniciar</button>
+                <!-- Botón para limpiar el texto en el área 2 -->
             </div>
         </section>
     </main>
+    <footer class="pie">
+        Creado por César I. Martínez Pérez
+    </footer>
+    <script src="/script.js"></script>
 </body>
+
 </html>

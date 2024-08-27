@@ -1,3 +1,251 @@
-*{
-    background: ;
-}
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Quicksand:wght@300..700&display=swap');
+
+/* Variables de color y fuente */
+:root {
+    --color--primario: #e0e1dd;
+    --color--secundario: #0d1b2a;
+    --color--terciario: #415a77;
+    --color--reactivo: #ee9b00;
+    --fuente--primaria: 'Quicksand', sans-serif;
+    --fuente--secundaria: "New Amsterdam", sans-serif;
+
+    /* Estilos generales */
+    * {
+        background: var(--color--primario);
+        font-family: var(--fuente--primaria);
+        color: var(--color--terciario);
+        font-weight: 400;
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Estilos de encabezado */
+    header {
+        display: flex;
+        justify-content: flex-start;
+        padding: 30px;
+    }
+
+    /* Estilos de logo */
+    .imagen__logo {
+        height: auto;
+        width: 10%;
+        padding-left: 300px;
+    }
+
+    /* Estilos principales */
+    main {
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        max-width: 1200px;
+        gap: 40px;
+    }
+
+    /* Estilos del área 1 */
+    .area__1 {
+        display: flex;
+        flex-direction: column;
+        margin: 1.5rem;
+        padding: 24px;
+    }
+
+    .area__1__texto {
+        border-radius: 15px;
+        border: none;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        height: 500px;
+    }
+
+    .area__1__texto::placeholder {
+        color: var(--color--reactivo);
+        text-align: center;
+    }
+
+    /* Estilos del área 2 */
+    .area__2 {
+        display: flex;
+        flex-direction: column;
+        margin: 1.5rem;
+        padding: 24px;
+        align-items: center;
+    }
+
+    .area__2__texto {
+        border-radius: 32px;
+        background: var(--color--secundario);
+        color: var(--color--primario);
+        font-family: var(--fuente--secundaria);
+        font-size: 1.5rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        background-image: url('/imagenes/Muñeco.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 400px;
+        height: 500px;
+    }
+
+    .area__2__texto::placeholder {
+        color: var(--color--primario);
+        text-align: center;
+
+    }
+
+    /* Estilos de botones */
+    .botones {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        /* Reducir el espacio entre botones */
+        width: 100%;
+        margin-top: 10px;
+        /* Añadir margen superior para separación */
+    }
+
+    .boton__encriptar,
+    .boton__desencriptar,
+    .boton__copiar,
+    .boton__limpiar {
+        background-color: var(--color--secundario);
+        color: var(--color--primario);
+        border-radius: 24px;
+        width: 328px;
+        /* Ajustar el ancho para que todos los botones sean uniformes */
+        padding: 10px;
+        border: none;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .boton__encriptar:hover {
+        background-color: var(--color--reactivo);
+        color: var(--color--terciario);
+        width: 335px;
+    }
+
+    .boton__desencriptar:hover {
+        background-color: var(--color--terciario);
+        color: var(--color--primario);
+        width: 335px;
+    }
+
+    .boton__copiar:hover,
+    .boton__limpiar:hover {
+        background-color: var(--color--reactivo);
+        color: var(--color--primario);
+        width: 335px;
+    }
+
+    /* Estilos de pie de página */
+    .pie {
+        background-color: var(--color--secundario);
+        color: var(--color--primario);
+        display: flex;
+        height: 70px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Responsividad para pantallas pequeñas */
+    @media (max-width: 375px) and (max-height: 933px) {
+        main {
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+
+        }
+
+        .area__1,
+        .area__2 {
+            width: 90%;
+            margin-bottom: 20px;
+        }
+
+        .area__1__texto,
+        .area__2__texto {
+            height: 300px;
+        }
+
+        .botones button {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .imagen__logo {
+            width: 50%;
+            padding-left: 0;
+        }
+    }
+
+    /* Responsividad para pantallas medianas */
+    @media (min-width: 376px) and (max-width: 1024px) {
+        main {
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .area__1,
+        .area__2 {
+            width: 80%;
+            margin-bottom: 30px;
+
+        }
+
+        .area__1__texto,
+        .area__2__texto {
+            height: 400px;
+        }
+
+        .botones button {
+            width: 80%;
+        }
+
+        .imagen__logo {
+            width: 30%;
+            padding-left: 0;
+        }
+    }
+
+    /* Responsividad para pantallas grandes */
+    @media (min-width: 1025px) and (max-width: 1440px) and (max-height: 1024px) {
+        main {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 40px;
+        }
+
+        .area__1,
+        .area__2 {
+            width: 45%;
+            margin-bottom: 0;
+        }
+
+        .area__1__texto,
+        .area__2__texto {
+            height: 500px;
+
+        }
+
+        .botones button {
+            width: 50%;
+
+        }
+
+        .imagen__logo {
+            width: 20%;
+
+            padding-left: 20px;
+
+        }
+    }
